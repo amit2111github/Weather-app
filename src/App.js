@@ -30,7 +30,7 @@ const App = () => {
 	const handleSubmit = async () => {
 		if (!city) return;
 		setValues({ ...values, loading: true });
-		let response = await fetch(`http://api.weatherbit.io/v2.0/current?key=${key}&city=${city}`);
+		let response = await fetch(` https://api.weatherbit.io/v2.0/current?key=${key}&city=${city}`);
 		response = await response.json();
 		setCity('');
 		if (response.error) {
